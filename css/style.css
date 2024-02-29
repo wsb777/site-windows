@@ -1,0 +1,44 @@
+body {
+    display:flex;
+    flex-direction: column;
+}
+
+main {
+    width:100%;
+    height:96vh;
+    background-image:url(../img/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+footer {
+    display: flex;
+    background-color:#101010;
+    width:100%;
+    height:4vh;
+    justify-content: space-between;
+}
+
+.left-seat,
+.right-seat {
+    display: flex;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left:14px;
+    padding-right:14px;
+    height:100%;
+}
+
+.button:hover {
+    background-color: #272727;
+}
+
+.button:hover .windows-svg {
+    fill:#429ce3;
+}
