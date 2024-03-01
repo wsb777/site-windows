@@ -6,6 +6,10 @@ function date() {
     let day = now.getDate();
     let month = now.getMonth() + 1;
     month = '' + month;
+    day = '' + day;
+    if (day.length == 1) {
+        day = "0" + day;
+    }
     if (month.length == 1) {
         month = "0" + month;
     }
@@ -19,4 +23,4 @@ function date() {
 date();
 setInterval(function(){
     date()
-}, 30000);
+}, 10000);
