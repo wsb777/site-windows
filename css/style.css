@@ -116,11 +116,6 @@ footer {
     width:30px;
 }
 
-.about-me {
-    position: absolute;
-    border:1px solid #0078d7;
-}
-
 .active {
     outline: 1.5px solid rgb(120, 141, 157);
     border-radius: 1px;
@@ -131,4 +126,68 @@ footer {
     outline: 1.5px solid rgb(83, 129, 165);
     border-radius: 1px;
     background-color:rgba(87, 150, 199, 0.3);
+}
+
+.about-me {
+    position: absolute;
+    border:1px solid #0078d7;
+    left:20%;
+    top:5%;
+    width:1000px;
+    height:800px;
+}
+
+.notepad-header {
+    display: flex;
+    color: white;
+    width: 100%;
+    height: 25px;
+    background-color: #0078d7;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.app-close {
+    padding-bottom:1.5px;
+    padding-top:1.5px;
+}
+
+.app-close:hover {
+    background-color: #e81123;
+}
+
+.app-full,
+.app-tray {
+    padding-bottom:1.5px;
+    padding-top:1.5px;
+}
+
+.app-tray:hover,
+.app-full:hover {
+    background-color: #1a86db;
+}
+
+.notepad-seat {
+    align-items: center;
+}
+
+.notepad-img {
+    margin-left: 2px;
+    width:17px;
+    height:17px;
+}
+
+.notepad-setting {
+    display: flex;
+    background-color: #fff;
+    font-size: 13px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.np-button {
+    padding: 2px 5px;
+}
+
+.np-button:hover {
+    background-color: #e5f3ff;
 }
