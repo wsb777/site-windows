@@ -2,6 +2,10 @@ function date() {
     let now = new Date();
     let hours = now.getHours();
     let minutes = now.getMinutes();
+    minutes = '' + minutes;
+    if (minutes.length == 1) {
+        minutes = "0" + minutes;
+    }
     let timeText = hours + ":" + minutes;
     let day = now.getDate();
     let month = now.getMonth() + 1;
