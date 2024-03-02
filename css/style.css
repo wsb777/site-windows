@@ -103,7 +103,6 @@ footer {
     text-align: center;
     padding:10px;
     margin:3px;
-    z-index: 1;
 }
 
 .folder:hover {
@@ -242,4 +241,10 @@ footer {
     font-size:13px;
     padding: 2px 30px 2px 5px;
     border:1px solid #d7d7d7;
+}
+
+@media (width < 1400px) {
+    .about-me {
+        width: 615px;
+    }
 }
