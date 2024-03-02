@@ -44,10 +44,23 @@ function activeTest() {
     }
 }
 function textFileOpen() {
-    activeTest();
-    if (!textFile.classList.contains('active')) {
-    textFile.classList.add('active');
+    if (textFile.classList.contains('active')) {
+        let aboutMe= document.querySelectorAll('.about-me');
+        if (aboutMe.length == 0) {
+            desktop.insertAdjacentHTML('beforeend','<div class="about-me"><div class="notepad-header"><div class="left-seat notepad-seat"><img class="notepad-img" src="./img/notepad.png"><p>about me.txt — Notepad</p></div><div class="right-seat notepad-seat"><button class="app-close button">✕</button><button class="app-full button">☐</button><button class="app-tray button">—</button></div></div><div class="notepad-setting"><button class="np-button button">File</button><button class="np-button button">Edit</button><button class="np-button button">Format</button><button class="np-button button">View</button><button class="np-button button">Help</button></div><div class="notepad-main"><textarea  class="notepad-workspace">Work! Work! Work! I love to work and gain new knowledge. Now I\'m 20 years old. At work they say that I am a responsible employee.</textarea><div class="notepad-scroll"></div></div><div class="np-add-setting"><p class="text">UTF-8</p><p class="text">Windows (CRLF)</p><p class="text">100%</p></div></div>');
+            const closeFile = document.querySelector('.app-close');
+            closeFile.addEventListener('click',closeTextFile);
+        }
     }
+    else {
+        activeTest();
+        textFile.classList.add('active');
+    }
+}
+
+function closeTextFile() {
+    let aboutMe = document.querySelector('.about-me');
+    aboutMe.remove();
 }
 
 function siteFolderOpen() {
