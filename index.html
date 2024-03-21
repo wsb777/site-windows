@@ -195,6 +195,45 @@
         </button>
       </section>
     </footer>
+    <template class="folder-template">
+      <div class="folder">
+        <img class="folder-img" src="">
+        <span class="folder-name"></span>
+      </div>
+    </template>
+    <template class="text-file-window">
+      <div class="about-me">
+        <div class="notepad-header">
+          <div class="left-seat notepad-seat">
+            <img class="notepad-img" src="./img/notepad.png">
+            <p>about me.txt — Notepad</p>
+          </div>
+          <div class="right-seat notepad-seat">
+            <button class="app-close button">✕</button>
+            <button class="app-full button">
+              <div class="square"></div>
+            </button>
+            <button class="app-tray button">—</button>
+          </div>
+        </div>
+        <div class="notepad-setting">
+          <button class="np-button button">File</button>
+          <button class="np-button button">Edit</button>
+          <button class="np-button button">Format</button>
+          <button class="np-button button">View</button>
+          <button class="np-button button">Help</button>
+        </div>
+        <div class="notepad-main">
+          <textarea  class="notepad-workspace"></textarea>
+          <div class="notepad-scroll"></div>
+        </div>
+        <div class="np-add-setting">
+          <p class="text">UTF-8</p>
+          <p class="text">Windows (CRLF)</p>
+          <p class="text">100%</p>
+        </div>
+      </div>
+    </template>
     <script src="./scripts/main.js"></script>
   </body>
 </html>
