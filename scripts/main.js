@@ -30,6 +30,7 @@ setInterval(function(){
 }, 10000);
 
 const desktop = document.querySelector('main');
+const leftSeat = document.querySelector('.left-seat');
 const textFile = document.querySelector('.text-file');
 const siteFolder = document.querySelector('.sites');
 const stackFolder = document.querySelector('.stack');
@@ -48,21 +49,31 @@ function textFileOpen() {
         const aboutMe = document.querySelectorAll('.about-me');
         if (aboutMe.length == 0) {
             const templateTextFile = document.querySelector('.text-file-window').content;
-            const templateClone = templateTextFile.querySelector('.about-me').cloneNode(true);
-            const textValue = templateClone.querySelector('.notepad-workspace');
+            const templateTextFileClone = templateTextFile.querySelector('.about-me').cloneNode(true);
+            const textValue = templateTextFileClone.querySelector('.notepad-workspace');
             textValue.innerHTML += 'Work! Work! Work! I love to work and gain new knowledge. Now I\'m 20 years old. At work they say that I am a responsible employee.'
-            desktop.appendChild(templateClone)
+            desktop.appendChild(templateTextFileClone)
             // desktop.insertAdjacentHTML('beforeend','<div class="about-me"><div class="notepad-header"><div class="left-seat notepad-seat"><img class="notepad-img" src="./img/notepad.png"><p>about me.txt — Notepad</p></div><div class="right-seat notepad-seat"><button class="app-close button">✕</button><button class="app-full button"><div class="square"></div></button><button class="app-tray button">—</button></div></div><div class="notepad-setting"><button class="np-button button">File</button><button class="np-button button">Edit</button><button class="np-button button">Format</button><button class="np-button button">View</button><button class="np-button button">Help</button></div><div class="notepad-main"><textarea  class="notepad-workspace">Work! Work! Work! I love to work and gain new knowledge. Now I\'m 20 years old. At work they say that I am a responsible employee.</textarea><div class="notepad-scroll"></div></div><div class="np-add-setting"><p class="text">UTF-8</p><p class="text">Windows (CRLF)</p><p class="text">100%</p></div></div>');
             const closeFile = document.querySelector('.app-close');
             closeFile.addEventListener('click',closeTextFile);
             const fullFile = document.querySelector('.app-full');
             fullFile.addEventListener('click', fullWidthFile);
+            const templateOpenElement = document.querySelector('.open-element').content;
+            const templateOpenElementClone = templateOpenElement.querySelector('.button').cloneNode(true);
+            const imgElement = templateOpenElementClone.querySelector("img");
+            imgElement.src = "./img/notepad.png";
+            leftSeat.appendChild(templateOpenElementClone)
+            templateOpenElementClone.addEventListener('click', );
         }
     }
     else {
         activeTest();
         textFile.classList.add('active');
     }
+}
+
+function minimizeWindow() {
+    
 }
 
 function closeTextFile() {
